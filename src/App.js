@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+import React from 'react';
+import Hero from './components/Hero';
+import Courses from './components/Courses';
+import Register from './components/Register';
+import About from './components/About';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
+import CountdownPage from './components/CountdownPage';
+import Benefits from './components/Benefits';
+import WhyCertifyEra from './components/WhyCertifyEra';
+
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Hero />
+      <CountdownPage />
+      <Courses />
+      <Register />
+      <WhyCertifyEra/>
+      <Benefits/>
+      <About />
+      <Contact />
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
