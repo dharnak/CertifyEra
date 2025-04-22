@@ -82,7 +82,10 @@ button:hover {
 @media (max-width: 600px) {
   .contact {
     padding: 30px 15px;
-  }
+    display: block;
+    position: relative;
+    left: 20px;
+    }
 
   .contact h2 {
     font-size: 1.6rem;

@@ -57,17 +57,7 @@ const Register = () => {
         >
           <option value="pmp-certification">PMP® Certification</option>
         </select>
-        <label>Payment Method:</label>
-        <select
-          name="paymentMethod"
-          value={formData.paymentMethod}
-          onChange={handleInputChange}
-          required
-        >
-          <option value="">Select Payment Method</option>
-          <option value="credit-card">Credit Card</option>
-          <option value="paypal">PayPal</option>
-        </select>
+       
         <button type="submit">Register Now</button>
       </form>
     </section>
