@@ -91,3 +91,49 @@
 .arrow-icon {
   font-size: 1.2rem;
 }
+/* components/CountdownPage.css */
+.offer-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.old-price {
+  color: #e74c3c; /* Red color for the old price */
+  text-decoration: line-through; /* Strikethrough effect */
+  margin-right: 10px;
+  animation: fadeOut 2s ease-out forwards; /* Animation for strikethrough */
+}
+
+.new-price {
+  color: #00ff6a; /* Green color for the new price */
+  animation: fadeIn 2s ease-in forwards; /* Animation for new price */
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.sale-banner {
+  text-align: center;
+}
+
+.icon {
+  font-size: 2rem;
+  color: #e74c3c;
+}
