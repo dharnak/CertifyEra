@@ -9,11 +9,9 @@ const Register = () => {
     course: 'pmp-certification', // Default to PMP Certification
     paymentMethod: '',
   });
-
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     // Add form submission logic here

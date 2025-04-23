@@ -1,82 +1,139 @@
 /* Base Styles */
 .why-certifyera {
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  .why-certifyera h2 {
-    font-size: 2.5rem;
-    color: #0d47a1;
-    margin-bottom: 30px;
-    position: relative;
-  }
-  
-  .why-certifyera h2::after {
-    content: '';
-    width: 60px;
-    height: 4px;
-    background-color: #0d47a1;
-    display: block;
-    margin: 10px auto 0;
-    border-radius: 2px;
-  }
-  
+  padding: 60px 20px;
+  background: #0e0e0e;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Title Styling */
+.why-certifyera h2 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 30px;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+.why-certifyera h2::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background-color: #fff;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+  transform: scaleX(0);
+  animation: slideIn 0.5s forwards;
+}
+
+/* List Styling */
+.why-certifyera ul {
+  list-style: none;
+  padding: 0;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.why-certifyera li {
+  position: relative;
+  padding: 25px 25px 25px 50px;
+  font-size: 1.1rem;
+  color: #fff;
+  text-align: left;
+  background: #ffffff;
+  border-radius: 16px;
+  z-index: 1;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.why-certifyera li::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ff0000, #ff9900, #33ff00, #00ffff, #3300ff, #ff00cc, #ff0000);
+  z-index: -1;
+  background-size: 400%;
+  border-radius: 18px;
+  filter: blur(8px);
+  animation: glowingBorder 10s linear infinite;
+}
+
+.why-certifyera li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #111;
+  border-radius: 14px;
+  z-index: -1;
+}
+
+.why-certifyera li:hover {
+  transform: translateY(-6px);
+}
+
+/* Icon Before Text */
+.why-certifyera li::marker,
+.why-certifyera li::before {
+  content: '✅';
+  position: absolute;
+  left: 15px;
+  top: 22px;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
   .why-certifyera ul {
-    list-style: none;
-    padding: 0;
-    max-width: 1000px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
   }
-  
+}
+
+@media (min-width: 900px) {
+  .why-certifyera ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .why-certifyera h2 {
+    font-size: 3rem;
+  }
+
   .why-certifyera li {
-    background-color: #ffffff;
-    padding: 20px 25px 20px 50px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    font-size: 1.1rem;
-    color: #333;
-    text-align: left;
-    position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .why-certifyera li::before {
-    content: '✅';
-    position: absolute;
-    left: 15px;
-    top: 20px;
     font-size: 1.2rem;
-    color: #0d47a1;
   }
-  
-  .why-certifyera li:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Animations */
+@keyframes slideIn {
+  0% {
+    transform: scaleX(0);
   }
-  
-  /* Responsive Design */
-  @media (min-width: 600px) {
-    .why-certifyera ul {
-      grid-template-columns: repeat(2, 1fr);
-    }
+  100% {
+    transform: scaleX(1);
   }
-  
-  @media (min-width: 900px) {
-    .why-certifyera ul {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  
-    .why-certifyera h2 {
-      font-size: 3rem;
-    }
-  
-    .why-certifyera li {
-      font-size: 1.2rem;
-    }
+}
+
+@keyframes glowingBorder {
+  0% {
+    background-position: 0% 50%;
   }
-  
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

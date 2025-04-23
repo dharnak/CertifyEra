@@ -30,7 +30,7 @@ const CountdownPage = () => {
     <div className="countdown-container">
       <div className="sale-banner">
         <FaFireAlt className="icon" />
-        <h2>🔥 Flash Sale Ends Soon!</h2>
+        <h2> Flash Sale Ends Soon!</h2>
       </div>
 
       <div className="timer">

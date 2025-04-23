@@ -1,40 +1,11 @@
-/* App.css */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f8f8f8;
+html {
+  scroll-behavior: smooth;
 }
-
-* {
+/* Universal Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-}
-
-h1, h2, h3 {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-}
-
-a {
-  text-decoration: none;
-}
-
-button {
-  cursor: pointer;
-}
-
-section {
-  padding: 40px 0;
-}
-
-#hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
-
-#courses, #register, #about, #contact {
-  background-color: white;
-  margin: 20px 0;
 }

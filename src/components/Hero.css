@@ -6,7 +6,7 @@
   justify-content: center;
   min-height: 100vh;
   padding: 60px 20px;
-  background: linear-gradient(135deg, #ffffff, #ffffff);
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
   overflow: hidden;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -23,7 +23,8 @@
 .hero-content h1 {
   font-size: clamp(2rem, 5vw, 3.5rem);
   margin-bottom: 20px;
-  animation: slideIn 1s ease-out;
+  display: inline-block;
+  animation: bounce 2s infinite;
 }
 
 .hero-content p {
@@ -53,8 +54,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
+  background: url('../assets/images/edu.jpg') center/cover no-repeat;
   opacity: 0.3;
   z-index: 1;
 }
@@ -71,23 +71,23 @@
   }
 }
 
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    transform: translateY(-20px);
+    animation-timing-function: ease-in-out;
   }
 }
 

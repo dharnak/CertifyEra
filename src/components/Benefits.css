@@ -1,82 +1,80 @@
-/* Base Styles */
 .benefits {
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  .benefits h2 {
-    font-size: 2.5rem;
-    color: #0d47a1;
-    margin-bottom: 30px;
-    position: relative;
-  }
-  
-  .benefits h2::after {
-    content: '';
-    width: 60px;
-    height: 4px;
-    background-color: #0d47a1;
-    display: block;
-    margin: 10px auto 0;
-    border-radius: 2px;
-  }
-  
+  padding: 60px 20px;
+  background: #ffffff;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.benefits h2 {
+  font-size: 2.5rem;
+  color: #0d47a1;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.benefits h2::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background-color: #0d47a1;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.benefits ul {
+  list-style: none;
+  padding: 0;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* 🌟 Modern Blue-White Card Design */
+.benefits li {
+  background-color: #f0f6ff;
+  color: #0d1b2a;
+  padding: 25px 30px 25px 50px;
+  border-radius: 12px;
+  text-align: left;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid #0d47a1;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ✔️ Simple Check Icon */
+.benefits li::before {
+  content: '✔️';
+  position: absolute;
+  left: 20px;
+  top: 25px;
+  font-size: 1.2rem;
+  color: #0d47a1;
+}
+
+/* Hover effect */
+.benefits li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(13, 71, 161, 0.15);
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
   .benefits ul {
-    list-style: none;
-    padding: 0;
-    max-width: 800px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
   }
-  
+}
+
+@media (min-width: 900px) {
+  .benefits h2 {
+    font-size: 3rem;
+  }
+
   .benefits li {
-    background-color: #ffffff;
-    padding: 20px 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    font-size: 1.1rem;
-    color: #333;
-    text-align: left;
-    position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .benefits li::before {
-    content: '✔️';
-    position: absolute;
-    left: 15px;
-    top: 20px;
     font-size: 1.2rem;
-    color: #0d47a1;
   }
-  
-  .benefits li:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* Responsive Design */
-  @media (min-width: 600px) {
-    .benefits ul {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (min-width: 900px) {
-    .benefits ul {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  
-    .benefits h2 {
-      font-size: 3rem;
-    }
-  
-    .benefits li {
-      font-size: 1.2rem;
-    }
-  }
-  
+}
