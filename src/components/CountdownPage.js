@@ -4,7 +4,7 @@ import { FaFireAlt, FaArrowRight } from 'react-icons/fa';
 
 const CountdownPage = () => {
   const calculateTimeLeft = () => {
-    const targetDate = new Date('2025-04-30T23:59:59');
+    const targetDate = new Date('2025-05-04T20:00:00'); // Updated to May 4th, 2025, at 8 PM
     const now = new Date();
     const difference = targetDate - now;
 
