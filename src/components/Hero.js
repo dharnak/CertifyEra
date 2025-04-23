@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section id="hero" className="hero">
       <div className="hero-content">
-        <h1>Webinar date and timing - 4th May at 8pm</h1>
+        <h1 className='cls'>Webinar date and timing - 4th May at 8pm</h1>
         <h1>Unlock Your Project Management Potential with PMP®</h1>
         <p>
           Join CertifyEra Consulting Services’ PMP® Certification Training Course — a comprehensive, interactive, and industry-focused program designed to help you become a certified Project Management Professional (PMP®) and lead projects with confidence and excellence.

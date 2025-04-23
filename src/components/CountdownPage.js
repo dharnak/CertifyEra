@@ -49,7 +49,7 @@ const CountdownPage = () => {
           <span className="old-price">₹499</span> <span className="new-price">₹99 Only</span>
         </p> {/* Added strikethrough and new price */}
       <button className="enroll-button">
-        Enroll Now <FaArrowRight className="arrow-icon" />@ rs 99/- only
+        Enroll Now <FaArrowRight className="arrow-icon" />@ Rs 99/-only
       </button>
     </div>
   );

@@ -106,7 +106,7 @@
     padding: 10px 20px;
   }
 }
-h1 {
+.cls{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 2rem;
   color: #1e3a8a; /* Tailwind's blue-800 */

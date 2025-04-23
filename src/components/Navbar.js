@@ -10,7 +10,7 @@ const Navbar = () => {
         <h1 className="company-name1">CertifyEra</h1>
       </div>
       <div className="navbar-right">
-        <div className="sale-pop">🔥 Recent Sale: PMP® Course Enrolled!</div>
+        <div className="sale-pop">Exclusive Webinar Offer -- Fast--Track Your PMP Success!</div>
       </div>
     </nav>
   );
