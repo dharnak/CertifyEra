@@ -12,6 +12,7 @@ const Footer = () => {
           <a href="#">Instagram</a>
           <a href="#">LinkedIn</a>
         </div>
+        <p className='name'>Developed By Dharneesh Thangavel @ezhumingroup</p>
       </div>
     </footer>
   );
