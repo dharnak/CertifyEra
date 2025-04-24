@@ -1,7 +1,7 @@
 /* Base Styles */
 .why-certifyera {
   padding: 60px 20px;
-  background: #0e0e0e;
+  background: linear-gradient(to bottom right, #0e0e0e, #1c1c1c);
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -14,14 +14,14 @@
   position: relative;
   text-transform: uppercase;
   letter-spacing: 2px;
-  text-shadow: 0 0 10px rgba(255,255,255,0.3);
+  text-shadow: 0 0 15px rgba(255,255,255,0.4);
 }
 
 .why-certifyera h2::after {
   content: '';
   width: 60px;
   height: 4px;
-  background-color: #fff;
+  background-color: #4fc3f7;
   display: block;
   margin: 10px auto 0;
   border-radius: 2px;
@@ -42,30 +42,26 @@
 
 .why-certifyera li {
   position: relative;
-  padding: 25px 25px 25px 50px;
+  padding: 25px 25px 25px 60px;
   font-size: 1.1rem;
-  color: #fff;
+  color: #ffffff;
   text-align: left;
-  background: #ffffff;
-  border-radius: 16px;
+  background: linear-gradient(135deg, #3a3a3a, #4fc3f7);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
   z-index: 1;
   overflow: hidden;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .why-certifyera li::before {
-  content: '';
+  content: '✅';
   position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: linear-gradient(45deg, #ff0000, #ff9900, #33ff00, #00ffff, #3300ff, #ff00cc, #ff0000);
-  z-index: -1;
-  background-size: 400%;
-  border-radius: 18px;
-  filter: blur(8px);
-  animation: glowingBorder 10s linear infinite;
+  left: 20px;
+  top: 24px;
+  font-size: 1.2rem;
+  color: #ffffff;
+  z-index: 2;
 }
 
 .why-certifyera li::after {
@@ -75,24 +71,14 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: #111;
-  border-radius: 14px;
-  z-index: -1;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  z-index: 0;
 }
 
 .why-certifyera li:hover {
-  transform: translateY(-6px);
-}
-
-/* Icon Before Text */
-.why-certifyera li::marker,
-.why-certifyera li::before {
-  content: '✅';
-  position: absolute;
-  left: 15px;
-  top: 22px;
-  font-size: 1.2rem;
-  color: #fff;
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(79, 195, 247, 0.5);
 }
 
 /* Responsive Design */
@@ -123,17 +109,5 @@
   }
   100% {
     transform: scaleX(1);
-  }
-}
-
-@keyframes glowingBorder {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
   }
 }
